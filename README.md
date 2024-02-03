@@ -1,4 +1,4 @@
-This script will lock the given Viewer buffer to the selected node in Foundry's Nuke to avoid inadvertent changes.
+This script will lock the given Viewer buffer to the selected node in Foundry's Nuke to avoid inadvertent changes. There are several other scripts on Nukepedia that do similar things, but they all have issues - either they don't work correctly/crash, or it's awkward to lock/nlock buffers, or they're over-complicated, etc. This one is simple - has no callbacks, no Qt stuff, it's simple, performant, and easy to use.
 
 I generally use `1` and `2` while I'm working for the "things I'm looking at", and the other buffers for e.g. the plate, the final comp, the previous render, a reference image/master shot, etc. With Nuke's default behaviour, it is _very_ easy to inadvertently change buffer. E.g. I have `3` set to the plate, and I want to check the plate against the thing I'm working on, but whoops, a node was selected, now `3` is pointing at that random node, and I have to jump to the plate, reset buffer `3`, and then jump back to where I was. Infuriating.
 
@@ -6,7 +6,7 @@ I generally use `1` and `2` while I'm working for the "things I'm looking at", a
 
 With a node selected, use `Alt-<1-0>` to lock that Viewer buffer to the selected node.
 
-Use `Shift-Alt-<1-0> to unlock that Viewer buffer. 
+Use `Shift-Alt-<1-0>` to unlock that Viewer buffer. 
 
 If the Viewer buffer is locked, pressing the related number will always recall the locked node to the Viewer, even if another node is selected when you push the button.
 
