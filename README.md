@@ -26,10 +26,11 @@ This lets me quickly move around the comp, using the handiest buffers (`1` and `
 
 # Installation
 
-Put `viewer_lock.py` and `menu.py` in a folder called `viewer_lock` in your `~/.nuke` folder.
+Put the `viewer_lock` folder in your `~/.nuke` folder.
 
-Add this line to your `init.py`:
+Add this line to your top-level `init.py`:
 
 ```
 nuke.pluginAddPath(viewer_lock)
 ```
+
