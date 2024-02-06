@@ -4,7 +4,14 @@ import nukescripts
 
 def get_active_viewer_node():
     viewer_window = nuke.activeViewer()
-    viewer = viewer_window.node()
+    if viewer_window is None:
+        old_selection = nuke.selectedNodes()
+        viewer = nuke.createNode("Viewer")
+        nukescripts.clear_selection_recursive()
+        for node in old_selection:
+            node["selected"].setValue(True)
+    else:
+        viewer = viewer_window.node()
     return viewer
 
 
