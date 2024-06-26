@@ -24,7 +24,7 @@ def setup_menus():
         )
         menu.addCommand(
             f"Viewer/Connect to B Side/Using Input {j}",
-            f"viewer_lock.connect_selected_to_viewer({i})",
+            f"viewer_lock.connect_selected_to_viewer({i + 10})",
             f"shift+{j % 10}",
             shortcutContext=2
         )
