@@ -114,7 +114,6 @@ def unlock_connection(inputIndex):
 def connect_selected_to_viewer(inputIndex):
     """Patch for built-in nukescripts method.
 Connects the selected node to the given viewer input index, ignoring errors if no node is selected."""
-    print(inputIndex)
     viewer = get_active_viewer_node()
     selection = get_selection()
     lock_knob = get_lock_knob(inputIndex)
